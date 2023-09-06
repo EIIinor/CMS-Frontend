@@ -257,6 +257,10 @@ header {
             flex-basis: 0;
             padding: 80px;
 
+            @media (max-width: 768px){
+               text-align: center;
+            }
+
             .title {
                 color: red;
                 font-size: 1rem;
@@ -267,6 +271,10 @@ header {
                 font-size: 3rem;
                 margin-top: 10px;
                 margin-bottom: 30px;
+
+                @media (max-width: 768px){
+                    font-size: 1.5rem;
+                }
             }
 
             .btn-theme {
@@ -277,9 +285,15 @@ header {
         }
 
         .feature-boxes {
-            flex: 1;
-            flex-basis: 0;
+            display: none;
             padding: 80px;
+
+            @media (min-width: 992px){
+                display: block;
+                flex: 1;
+                flex-basis: 0;
+            }
+
 
             .feature-box {
                 display: inline-block;
@@ -307,29 +321,33 @@ header {
 
 /* about section */
 .about-section {
+    
     .container {
         margin-top: 60px;
         display: flex;
+        justify-content: center;
+        position: relative;
 
         .img-column {
+            flex: 1;         
             display: flex;
-            align-items: center;
-            justify-content: center; 
-            flex: 1;
-            flex-basis: 0;
-            position: relative;
-            padding: 60px;
+            justify-content: center;
+            
 
             > img {
-                width: 350px;
+                width: 100%;
+                max-width: 500px;
+                height: 70%; 
+                object-fit: cover;
+                                    
             }
 
             .img-info {
                 background-color: rgb(224, 240, 246);
                 padding: 20px;
                 position: absolute;
-                left: 100px;
-                bottom: 110px;
+                left: 80px;
+                bottom: 290px;
                 width: 260px;
 
                 > h4 {
@@ -349,8 +367,8 @@ header {
 
         .about-column {
             flex: 1;
-            flex-basis: 0;
-            padding: 60px;
+            padding-right: 50px;
+            padding-left: 50px;
 
             .title {
                 color: red;
@@ -358,13 +376,14 @@ header {
             }
 
             > h1 {
+                margin-top: 20px;
                 font-weight: 700;
-                font-size: 3rem;
-                margin-bottom: 20px;
+                font-size: 45px;
+                margin-bottom: 40px;
             }
 
             > p {
-                font-size: 12px;
+                font-size: 16px;
             }
 
             .about-links {
